@@ -1,6 +1,7 @@
 # Посчитать сумму всех цифр числа
 
-n = float(input("Введите число: "))
+from decimal import Decimal
+n = Decimal(input("Введите число: "))
 sum = 0
 if n - int(n) > 0:
     while n - int(n) != 0:
