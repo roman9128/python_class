@@ -14,5 +14,13 @@ while j < len(s):
     values_list.append(s[j+1])
     j += 2
 values_list = set(values_list)
+
+# values_list = set()
+# for item in dictionary:
+#     for value in item.values():
+#         values_list.add(value.strip())
+
 values_list = list(values_list)
+values_list.sort()
 print(values_list)
+
