@@ -37,8 +37,7 @@ def is_winner(arr):
     elif (arr[2] == arr[4] == arr[6]) and arr[2] != " ":
         print(f"{arr[2]} - winner")
         return True
-    else:
-        return False
+    return False
 
 def make_x_move(arr, move):
     if move == 7:
@@ -106,34 +105,27 @@ def is_empty(arr, move):
 i = 0
 table = [" "," "," "," "," "," "," "," "," "]
 print_table(table)
-while (True):
-    x_move = int(input("Куда ходит Х? "))    
-    if is_empty(table, x_move) == True:
-        make_x_move(table, x_move)
-        i += 1
-    else:
-        while (True):
-            x_move = int(input("Куда ходит Х? "))  
-            if is_empty(table, x_move) == True:
-                make_x_move(table, x_move)
-                i += 1
-                break
-    
+while True:
     if is_winner(table) == True:
         break
     if i > 8:
         print("no winner")
         break
-    
-    o_move = random.randint(1, 9)    
-    if is_empty(table, o_move) == True:
-        make_o_move(table, o_move)
-        i += 1
-    else:
-        while (True):
-            o_move = random.randint(1, 9)    
-            if is_empty(table, o_move) == True:
-                make_o_move(table, o_move)
-                i += 1
-                break
+    while True:
+        x_move = int(input("Куда ходит Х? "))  
+        if is_empty(table, x_move) == True:
+            make_x_move(table, x_move)
+            i += 1
+            break
+    if is_winner(table) == True:
+        break
+    if i > 8:
+        print("no winner")
+        break
+    while True:
+        o_move = random.randint(1, 9)    
+        if is_empty(table, o_move) == True:
+            make_o_move(table, o_move)
+            i += 1
+            break
 end = input("Ещё разок?")
