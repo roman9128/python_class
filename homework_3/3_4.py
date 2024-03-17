@@ -14,4 +14,4 @@ while i < k:
     i += 1
 nf.sort()
 f = nf + f
-print(f) 
+print(f)

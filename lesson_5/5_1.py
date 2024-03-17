@@ -8,4 +8,4 @@ def fib (n):
     return fib(n - 1) + fib(n - 2)
 
 n = int(input("Введите: "))
-print(fib(n)) 
+print(fib(n))
