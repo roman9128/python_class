@@ -1,0 +1,1 @@
+{"Name1": {"phones": [1234, 2341], "birthday": "01.01.2000", "email": "name1@email.internet"}, "Name2": {"phones": [7890], "birthday": "02.02.2002"}}
